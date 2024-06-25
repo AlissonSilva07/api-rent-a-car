@@ -8,7 +8,8 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "carro")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo_carro", discriminatorType = DiscriminatorType.STRING)
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -25,6 +26,7 @@ public class Carro {
     private Integer portas;
     private boolean arCondicionado;
     private Double motor;
+    @Enumerated(EnumType.STRING)
     private Transmissao transmissao;
     private Double valorDiaria;
     private boolean disponivel;
