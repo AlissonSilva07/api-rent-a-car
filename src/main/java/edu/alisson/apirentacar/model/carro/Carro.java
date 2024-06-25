@@ -28,4 +28,8 @@ public class Carro {
     private Transmissao transmissao;
     private Double valorDiaria;
     private boolean disponivel;
+
+    public String getTransmissao() {
+        return transmissao.getDescricao();
+    }
 }

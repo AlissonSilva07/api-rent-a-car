@@ -2,6 +2,7 @@ package edu.alisson.apirentacar.service.carro;
 
 import edu.alisson.apirentacar.model.carro.CarroCombustao;
 import edu.alisson.apirentacar.repository.CarroCombustaoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Optional;
 
 @Service
 public class CarroCombustivelServiceimpl implements CarroCombustivelService {
+    @Autowired
     private CarroCombustaoRepository carroCombustaoRepository;
 
     @Override
