@@ -17,9 +17,9 @@ public class CarroServiceImpl implements CarroService {
     @Autowired
     private CarroRepository carroRepository;
     @Autowired
-    private CarroCombustaoRepository carroCombustivelService;
+    private CarroCombustaoRepository carroCombustaoRepository;
     @Autowired
-    private CarroEletricoRepository carroEletricoService;
+    private CarroEletricoRepository carroEletricoRepository;
 
     @Override
     public List<Carro> getAll() {
@@ -33,21 +33,21 @@ public class CarroServiceImpl implements CarroService {
 
     @Override
     public void saveCarroCombustivel(CarroCombustao carroCombustao) {
-        carroCombustivelService.save(carroCombustao);
+        carroCombustaoRepository.save(carroCombustao);
     }
 
     @Override
     public void saveCarroEletrico(CarroEletrico carroEletrico) {
-        carroEletricoService.save(carroEletrico);
+        carroEletricoRepository.save(carroEletrico);
     }
 
     @Override
     public void deleteCarroCombustivel(String idCarroCombustivel) {
-        carroCombustivelService.deleteById(idCarroCombustivel);
+        carroCombustaoRepository.deleteById(idCarroCombustivel);
     }
 
     @Override
     public void deleteCarroEletrico(String idCarroEletrico) {
-        carroEletricoService.deleteById(idCarroEletrico);
+        carroEletricoRepository.deleteById(idCarroEletrico);
     }
 }
