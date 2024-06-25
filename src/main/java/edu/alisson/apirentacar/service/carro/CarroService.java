@@ -12,4 +12,6 @@ public interface CarroService {
     public Optional<Carro> getCarroById(String idCarro);
     public void saveCarroCombustivel(CarroCombustao carroCombustao);
     public void saveCarroEletrico(CarroEletrico carroEletrico);
+    public void deleteCarroCombustivel(String idCarroCombustivel);
+    public void deleteCarroEletrico(String idCarroEletrico);
 }

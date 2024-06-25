@@ -40,4 +40,14 @@ public class CarroServiceImpl implements CarroService {
     public void saveCarroEletrico(CarroEletrico carroEletrico) {
         carroEletricoService.save(carroEletrico);
     }
+
+    @Override
+    public void deleteCarroCombustivel(String idCarroCombustivel) {
+        carroCombustivelService.deleteById(idCarroCombustivel);
+    }
+
+    @Override
+    public void deleteCarroEletrico(String idCarroEletrico) {
+        carroEletricoService.deleteById(idCarroEletrico);
+    }
 }

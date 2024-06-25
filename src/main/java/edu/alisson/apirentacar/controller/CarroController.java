@@ -40,4 +40,16 @@ public class CarroController {
         carroService.saveCarroCombustivel(carroCombustao);
         return ResponseEntity.ok(carroCombustao);
     }
+
+    @DeleteMapping("/combustao/{idCarroCombustivel}")
+    public ResponseEntity<String> deleteCarroCombustao(@PathVariable String idCarroCombustivel) {
+        carroService.deleteCarroCombustivel(idCarroCombustivel);
+        return ResponseEntity.ok("O carro de id " + idCarroCombustivel + " foi devidamente deletado da base de dados.");
+    }
+
+    @DeleteMapping("/eletrico/{idCarroEletrico}")
+    public ResponseEntity<String> deleteCarroEletrico(@PathVariable String idCarroEletrico) {
+        carroService.deleteCarroEletrico(idCarroEletrico);
+        return ResponseEntity.ok("O carro de id " + idCarroEletrico + " foi devidamente deletado da base de dados.");
+    }
 }
