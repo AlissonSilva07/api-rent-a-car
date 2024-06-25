@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CarroServiceImpl implements CarroService {
@@ -23,6 +24,11 @@ public class CarroServiceImpl implements CarroService {
     @Override
     public List<Carro> getAll() {
         return carroRepository.findAll();
+    }
+
+    @Override
+    public Optional<Carro> getCarroById(String idCarro) {
+        return carroRepository.findById(idCarro);
     }
 
     @Override
